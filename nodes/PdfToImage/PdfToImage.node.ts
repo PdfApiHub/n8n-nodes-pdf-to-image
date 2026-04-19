@@ -11,10 +11,11 @@ export class PdfToImage implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'PDF to Image',
 		name: 'pdfToImage',
-		icon: { light: 'file:../../icons/icon.svg', dark: 'file:../../icons/icon.svg' },
+		icon: { light: 'file:../../icons/light.svg', dark: 'file:../../icons/dark.svg' },
 		group: ['transform'],
 		version: 1,
 		description: 'Render PDF pages as PNG, JPG, or WebP images using PDF API Hub',
+		subtitle: '={{$parameter["operation"]}}',
 		defaults: { name: 'PDF to Image' },
 		inputs: [NodeConnectionTypes.Main],
 		outputs: [NodeConnectionTypes.Main],
@@ -28,24 +29,24 @@ export class PdfToImage implements INodeType {
 				noDataExpression: true,
 				options: [
 				{
-								"name": "PDF to PNG",
-								"value": "pdfToPng",
-								"description": "Convert PDF pages to PNG images",
-								"action": "Convert PDF to PNG"
+					name: 'PDF to PNG',
+					value: 'pdfToPng',
+					description: 'Convert PDF pages to PNG images',
+					action: 'Convert PDF to PNG',
 				},
 				{
-								"name": "PDF to JPG",
-								"value": "pdfToJpg",
-								"description": "Convert PDF pages to JPEG images",
-								"action": "Convert PDF to JPG"
+					name: 'PDF to JPG',
+					value: 'pdfToJpg',
+					description: 'Convert PDF pages to JPEG images',
+					action: 'Convert PDF to JPG',
 				},
 				{
-								"name": "PDF to WebP",
-								"value": "pdfToWebp",
-								"description": "Convert PDF pages to WebP images",
-								"action": "Convert PDF to WebP"
-				}
-],
+					name: 'PDF to WebP',
+					value: 'pdfToWebp',
+					description: 'Convert PDF pages to WebP images',
+					action: 'Convert PDF to WebP',
+				},
+			],
 				default: 'pdfToPng',
 			},
 			...description,

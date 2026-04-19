@@ -1,39 +1,58 @@
 # n8n-nodes-pdf-to-image
 
-> Render PDF pages as PNG, JPG, or WebP images using PDF API Hub
+[![NPM Version](https://img.shields.io/npm/v/n8n-nodes-pdf-to-image.svg)](https://www.npmjs.com/package/n8n-nodes-pdf-to-image)
+[![License](https://img.shields.io/npm/l/n8n-nodes-pdf-to-image.svg)](LICENSE.md)
 
-This is an [n8n](https://n8n.io/) community node. It lets you use **[PDF API Hub](https://pdfapihub.com)** in your n8n workflows.
+> Render PDF pages as high-quality PNG, JPG, or WebP images — with DPI, resize, and background color control.
 
-## Prerequisites
+This is an [n8n](https://n8n.io/) community node powered by **[PDF API Hub](https://pdfapihub.com)**.
 
-- **n8n** v1.0.0 or later
-- A **PDF API Hub** API key — [get one free](https://pdfapihub.com)
+---
 
-## Installation
+## 🚀 Install
 
-1. Go to **Settings → Community Nodes**
-2. Select **Install a community node**
-3. Enter `n8n-nodes-pdf-to-image`
-4. Agree to the risks and click **Install**
+1. Go to **Settings → Community Nodes** in n8n
+2. Enter `n8n-nodes-pdf-to-image`
+3. Click **Install**
 
-## Operations
+## 🔑 Setup
 
-- **PDF to PNG** — Convert PDF pages to PNG images
-- **PDF to JPG** — Convert PDF pages to JPEG images
-- **PDF to WebP** — Convert PDF pages to WebP images
+Sign up at [pdfapihub.com](https://pdfapihub.com) → copy your API key → add to n8n credentials.
 
-## Credentials
+---
 
-You need a PDF API Hub API key to use this node:
+## ✨ Operations
 
-1. Sign up at [pdfapihub.com](https://pdfapihub.com)
-2. Copy your API key from the dashboard
-3. In n8n, create new **PDF API Hub API** credentials and paste your key
+- **PDF to PNG** — lossless, transparent background support
+- **PDF to JPG** — compressed, smaller file sizes
+- **PDF to WebP** — modern format, best compression
 
-## Resources
+### Features
 
-- [PDF API Hub Documentation](https://pdfapihub.com/docs)
-- [n8n Community Nodes Documentation](https://docs.n8n.io/integrations/community-nodes/)
+| Parameter | Description |
+|-----------|-------------|
+| **Input Type** | URL or Binary file |
+| **Pages** | Single page, range (`1-3`), or comma-separated (`1,3,5`) |
+| **DPI** | Resolution 72–300 (higher = sharper but larger) |
+| **Quality** | Compression quality 1–100 (JPG/WebP only) |
+| **Output Format** | URL, Base64, Both, or Binary File |
+
+### Advanced Options
+
+| Option | Description |
+|--------|-------------|
+| **Width / Height** | Resize output to specific pixel dimensions |
+| **Background Color** | Hex color for transparent PNG backgrounds |
+| **Output Filename** | Custom filename |
+
+---
+
+## 💡 Use Cases
+
+- **Thumbnails** — generate preview images for PDF documents
+- **Social sharing** — convert PDF pages to images for social media
+- **Image extraction** — render specific pages as images for presentations
+- **OCR preprocessing** — convert PDF to image before custom OCR
 
 ## License
 
